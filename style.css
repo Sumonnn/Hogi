@@ -1,0 +1,867 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "gilroy";
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+:root{
+    --nav-color:#d2cccca1;
+    --primary-text-color:#5037E9;
+    --bacnground-color:#0B0616;
+}
+
+
+/* utility class */
+
+
+a{
+    text-decoration: none;
+}
+.container{
+    width: 90%;
+    height: 100%;
+    /* margin-left: 5%; */
+    margin-inline: auto;    
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.hover-link{
+    padding:9px 18px;
+
+}
+.hover-link:hover{
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #280ce3;
+}
+.secondary-botton{
+    padding:15px 30px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #5339fa;
+    color: #ffffff;
+    transition: 0.5s ease-in;
+}
+.secondary-botton:hover{
+    background-color: #4f37e9a9;
+    transform: scale(1.1);
+}
+
+
+/* first-section */
+
+
+.first-section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url(https://hogi.io/wp-content/themes/twentytwenty/assets/src/images/section-bg1.svg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 1px;
+}
+.top-nav{
+    margin-top: 3vh;
+    width: 90%;
+    height: 10%;
+    position: fixed;
+    z-index: 1;
+    /* background-color: aquamarine; */
+    justify-content: space-between;
+}
+.top-nav .hogi-logo{
+    width: 100px;
+    cursor: pointer;
+}
+.center-nav{
+    padding: 3px 4px;
+    border-radius: 5px;
+    gap: 1.5vw;
+    background-color:var(--nav-color);
+    /* box-shadow: 2px 2px 1px rgba(234, 232, 232, 0.388); */
+}
+.center-nav a{
+    font-size: 1.16rem;
+    font-weight: 500;
+    color: black;
+}
+.call-talk{
+     padding: 12px 24px;
+     gap:10px;
+     background-color: var(--nav-color);
+     border-radius: 20px;
+     color: rgba(137, 44, 223, 0.895);
+     font-size: 1.1rem;
+     font-weight: 600;
+}
+.video-section{
+    width: 90%;
+    height: 80%;
+    /* border-radius: 20px; */
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* background-color: green; */
+}
+.video-section video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    object-position: center;
+}
+.text-center{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    flex-direction: column;
+    gap: 14vh;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+}
+.text-center h1{
+    font-size: 4.9rem;
+    line-height: 65px;
+}
+.text-center p{
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+
+/* second-section */
+
+
+.second-section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url(https://hogi.io/wp-content/themes/twentytwenty/assets/src/images/section-bg1.svg);
+    background-size: cover;
+    background-position: center;
+}
+.left-text{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+.left-text p{
+    font-weight: 600;
+}
+.content{
+      width: 90%;
+      height: 60%;
+      border-radius: 500px;
+      position: absolute;
+      top: 56%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: #D6D9E8;
+}
+.left-child{
+    width: 45%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:flex-start ;
+    padding-left: 15vw;
+    color: #ffffff;
+    /* background-color: aquamarine; */
+}
+.left-child h2{
+    font-size: 3rem;
+    line-height: 45px;
+}
+.left-child p{
+   font-size: 1.9rem;
+   font-weight: 600;
+
+}
+.left-child h3{
+   font-size: 2rem;
+   color: var(--primary-text-color);
+   animation-name: glitch;
+   animation-duration: 1s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+/* bhujte hobe */
+@keyframes glitch {
+    11%, 14% {
+        clip-path: polygon(100% 0, 0 18%, 99% 46%, 0 78%, 100% 100%, 100% 57%, 0 100%, 100% 76%, 0 59%, 100% 35%, 0 37%, 100% 21%);
+    }
+    12%, 16% {
+        clip-path: polygon(0 51%, 0 29%, 100% 0, 0 14%, 99% 57%, 100% 23%, 0 100%, 100% 72%, 0 0, 100% 100%);
+    }
+    13%, 17% {
+        clip-path: polygon(0% 0%, 99% 0%, 99% 8%, 0% 7%, 0% 14%, 99% 15%, 100% 22%, 0% 22%, 0% 30%, 99% 30%, 99% 39%, 0% 37%, 0% 43%, 100% 45%, 100% 50%, 0% 49%, 0% 56%, 99% 57%, 99% 63%, 0% 63%, 0% 68%, 99% 68%, 99% 75%, 0% 76%, 0% 81%, 100% 83%, 100% 89%, 0% 88%, 0% 94%, 100% 95%, 100% 100%, 0% 99%);
+    }
+}
+.right-child{
+    width: 50%;
+    height: 100%;
+    background-image: url(https://hogi.io/wp-content/uploads/2023/05/tagline2x.webp);
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgb(11, 13, 12); */
+}
+
+
+/* third-section */
+
+.third-section{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+.feature-section{
+   height: 100%;
+   /* background-color: #5037E9; */
+}
+.feature-section .left-video-child{
+    width: 52%;
+    height: 85%;
+}
+.feature-section .left-video-child video{
+    width: 102%;
+    height: 95%;
+    object-fit: cover;
+    object-position: center;
+    /* border: 2px solid rgb(122, 4, 4); */
+}
+.feature-section .right-text-child{
+    width: 50%;
+    height: 85%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6vh;
+    padding-left: 4vw;
+    /* background-color: rgb(61, 55, 55); */
+}
+.feature-section .right-text-child p{
+   color: black;
+   font-weight: 600;
+   font-size: 1.5rem;
+}
+.feature-section .right-text-child h3{
+    color: var(--primary-text-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.feature-section .right-text-child h2{
+    color: var(--primary-text-color);
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+
+
+/* four-section */
+
+.four-section{
+    width: 100%;
+    height: 110%;
+    background-color: var(--bacnground-color);
+}
+.information-section{
+   height: 100%;
+   /* background-color: aqua; */
+}
+.information-section .left-feature-section{
+    width: 50%;
+    height: 90%;
+    color: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+    gap: 6vh;
+}
+.information-section .left-feature-section h2{
+    font-size: 2.5rem;
+}
+.information-section .left-feature-section p{
+   font-size: 1.2rem;
+   font-weight: 700;
+}
+.information-section .left-feature-section .bottom-img{
+    width: 450px;
+    height: 450px;
+    background-image: url(https://hogi.io/wp-content/uploads/2023/05/services2x.webp);
+    background-size: cover;
+   background-position: center;
+}
+.information-section .right-feature-section{
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 90%;
+    /* background-color: rgb(162, 113, 53); */
+}
+.information-section .right-feature-section p{
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+    position: relative;
+}
+
+.information-section .right-feature-section p::before{
+    content: "";
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    border-bottom: 2px solid var(--primary-text-color);
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    transition: 0.3s ease-out;
+}
+.information-section .right-feature-section p:hover::before{
+    width: 100%;
+}
+
+
+
+/* card-feature-section */
+
+
+
+.card-feature-section{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+.card-feature-section .card-section{
+   height: 100%;
+   flex-direction: column;
+   justify-content: space-evenly;
+   /* background-color: #5037E9; */
+}
+.left-center-text p{
+   text-align: center;
+   font-size: 3rem;
+   font-weight: 600;
+}
+.right-card-section{
+    width: 100%;
+   justify-content: space-between;
+}
+.card{
+    width: 445px;
+    height: 460px;
+    border-radius: 20px;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-inline: 16px;
+    background-color: #d2cccc48;
+}
+.card h2{
+    font-size: 1.7rem;
+
+}
+.card p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+
+/* 6th section */
+
+
+
+.sixs-section{
+    width: 100%;
+    height: 90%;
+    background-color: #ffffff;
+}
+.boxs-section {
+    height: 100%;
+    justify-content: center;
+    /* background-color: green; */
+}
+.left-box-child{
+   width: 65%;
+   height: 43%;
+   background-image: url(https://hogi.io/wp-content/uploads/2023/05/contact-us2x.webp);
+   background-size: cover;
+   background-position: center;
+   flex-direction: column;
+   justify-content: center;
+   gap: 3vh;
+   color: #ffffff;
+}
+.left-box-child h2{
+    font-size: 3rem;
+}
+.left-box-child p{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.right-box-child{
+   width: 35%;
+   height: 42%;
+   flex-direction: column;
+   justify-content: space-between;
+   /* background-color: red; */
+}
+.box{
+    width: 90%;
+    height: 32%;
+    border-radius: 20px;
+    justify-content:center ;
+    background-color: var(--nav-color);
+}
+.box h2{
+    font-weight: 500;
+}
+.box:hover{
+    background: linear-gradient(152.77deg,#F6FDA3 -5.35%,#FF9191 113.96%);
+}
+
+
+/* seven-section */
+
+
+.seven-section{
+    width: 100%;
+    height: 64%;
+    background-color: #ffffff;
+}
+.text-section{
+    height: 100%;
+    justify-content: start;
+    flex-direction: column;
+    gap: 5vh;
+    color: black;
+    /* background-color: #0B0616; */
+}
+.text-section h2{
+   font-size: 3rem;
+   font-weight: 600;
+}
+.text-section p{
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.785);
+  line-height: 35px;
+}
+
+/* scroll bar animation */
+
+
+.scroll{
+    width: 90%;
+    height: 12%;
+    justify-content: center;
+    align-items: end;
+    overflow-x: auto;
+
+}
+.scroll::-webkit-scrollbar{
+    display: none;
+  
+}
+.scroll img{
+    width: 200px;
+    margin-right: 90px;
+
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+@keyframes scroll {
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(calc(-100% - 4px));
+    }
+}
+
+/* 8th section big-feature-section */
+
+.big-feature-section{
+    width: 100%;
+    height: 70%;
+    position: relative;
+    background: linear-gradient(95.39deg, #5D44EE -7.09%, #C0B4F0 107.31%);
+}
+.big-feature-section2{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://hogi.io/wp-content/themes/twentytwenty/assets/src/images/section-bg1.svg);
+    background-size: cover;
+    background-position: center;
+}
+.big-text-feature-section{
+      flex-direction: column;
+      justify-content: space-evenly;
+}
+.big-text-feature-section h2{
+    font-size: 3.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+.big-text-feature-section h4{
+   font-size: 1.8rem;
+   letter-spacing: 2px;
+   color: rgb(208, 169, 182);
+}
+
+
+/* 9th section */
+
+.nine-section{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(95.39deg, #5D44EE -7.09%, #C0B4F0 107.31%);;
+}
+.nine-card-section{
+    justify-content: center;
+    flex-direction: column;
+}
+.arrow-section i{
+    padding: 18px 22px ;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #C0B4F0;
+}
+.arrow-section i:nth-child(1){
+    background-color: #c0b4f03e;
+}
+.big-card-section{
+    width: 100%;
+    height: 80%;
+   align-items:  flex-end;
+   gap: 10px;
+   overflow-x: auto;
+    /* background-color: #a4a0ac; */
+}
+.big-card-section::-webkit-scrollbar{
+    display: none;
+}
+.big-card-section .card1{
+   min-width: 55%;
+   height: 90%;
+   position: relative;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: space-evenly;
+   padding-left: 50px;
+   border-radius: 25px;
+   color: #ffffff;
+   background-color: #c0b4f076;
+}
+.big-card-section .card1 h2{
+     font-size: 3rem;
+}
+.big-card-section .card1 p{
+    font-size: 1.5rem;
+
+}
+.big-card-section .card1 h3{
+    font-size: 1.8rem;
+}
+.big-card-section .card1 h4{
+    font-size: 1.8rem;
+}
+.big-card-section .card1 h5{
+    font-size: 1.2rem;
+}
+.big-card{
+   min-width:32%;
+    height: 90%;
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+.big-card p{
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-left: 25px;
+    margin-top: 50px;
+}
+.big-card p:nth-last-child(1){
+    margin-top: 100px;
+}
+
+/* 10th section */
+
+.ten-section{
+    width: 100%;
+    height: 100%; 
+    position: relative;
+}
+.ten-section video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.overlay{
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    justify-content: space-between;
+    gap: 15PX;
+    top: 0;
+    left: 5%;
+    /* background-color: red; */
+}
+.column{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
+    color: #ffffff;
+}
+.column p{
+    font-size: 1.2rem;
+}
+.column h2{
+      font-size: 2.4rem;
+      font-weight: 600;
+}
+.column2{
+    gap: 95px;
+    margin-bottom: 35px;
+}
+.column3 .text-card{
+    gap: 6px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.column3 .text-card p{
+    font-size: 1rem;
+}
+
+/* 11the section elevin-section */
+
+.elevin-section{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bacnground-color);
+}
+.elevin-section h1{
+    font-size: 13.1rem;
+    -webkit-text-stroke: 5px #443567;
+    color: transparent;
+}
+.elevin-boxs-section{
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+.elevin-boxs-section .left-box1-child{
+      width: 50%;
+      height: 58%;
+      border-radius: 25px;
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      color: #ffffff;
+      background-color: #735DEF;
+      padding-left: 50px;
+}
+.elevin-boxs-section .left-box1-child  h2{
+    font-size: 2rem;
+}
+.elevin-boxs-section .left-box1-child p{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.elevin-boxs-section .right-box2-child{
+    width: 50%;
+    height: 58%;
+    border-radius: 25px;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-left: 50px;
+    background-color: #735DEF;
+    color: white;
+}
+.elevin-boxs-section .right-box2-child p{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.elevin-boxs-section .right-box2-child a{
+    background-color: #0c0346;
+}
+.elevin-boxs-section .right-box2-child a:hover{
+    background-color: #0c034693;
+}
+
+
+/* 12th section */
+
+.twelve-section{
+    width: 100%;
+    height: 80%;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    background-color: var(--bacnground-color);
+}
+.twelve-section p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+}
+.twelve-section h2{
+    font-size: 3rem;
+
+}
+
+
+/* last-section 13th section */
+
+.last-section{
+    width: 100%;
+    height: 75%;
+    background-color: var(--bacnground-color);
+}
+.centar-div{
+    height: 80%;
+    /* bhujte hobe conic-gradient */
+    background: conic-gradient(from 200.2deg at 50% 50%, #3F1E85 0deg, #672CE6 360deg);
+    border-radius: 267px;
+    justify-content: space-between;
+    padding: 80px 0;
+    color: white;
+}
+.left-last-child{
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.left-last-child .p-h2-compaint p{
+    font-size: 1.2rem;
+}
+.left-last-child .p-h2-compaint h2{
+    font-size: 2rem;
+}
+.left-last-child .p-h2-compaint{
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    letter-spacing: 3px;
+}
+.left-last-child .seven-card{
+    gap: 20px;
+}
+.left-last-child .seven-card a{
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid white;
+}
+.left-last-child .p-div-compaint p{
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.left-last-child .p-div-compaint{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+.right-last-child{
+    height: 100%;
+    margin-right: 155px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.right-last-child p{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.right-last-child h2{
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* footer-section  */
+
+.footer-section{
+    width: 100%;
+    height: 50%;    
+    background-color: var(--bacnground-color);
+}
+.footer-last-section{
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-between;    
+}
+.footer-last-section .footer-column{
+   flex-direction: column;
+   color: white;
+   align-items: flex-start;
+   gap: 15px;
+}
+.footer-last-section .footer-column p{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.footer-last-section .footer-column a{
+    color: white;
+    font-size: 1.2rem;
+    position: relative;
+}
+.footer-column1{
+    height: 80%;
+    justify-content: space-between;
+}
+.footer-column1 img{
+    width: 110px;
+}
+.footer-column1 p{
+    font-size: 1.3rem;
+    
+}
+.footer-column1 .two-section-footer{
+  gap: 25px;
+}
+.footer-last-section .footer-column a::before{
+    content: "";
+    width: 0%; 
+    position: absolute;
+    bottom: 0;
+    transition: 0.4s ease-in-out;
+    border-bottom: 1px solid white;
+}
+.footer-last-section .footer-column a:hover::before{
+    width: 100%;
+}
